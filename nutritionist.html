@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/healthy_living.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
 		<div class="wrap">
@@ -43,7 +46,7 @@
 			</div>
 		</div>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      	<div class="container">
+      <div class="container-fluid" >
         <a class="navbar-brand" href="index.html">Health<span>coach<i class="fa fa-leaf"></i></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-bars"></span> Menu
@@ -52,10 +55,9 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Advisor<span class="caret"></span></a>
+            <li class="nav-item dropdown active"><a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Advisor<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-navbar active"><a href="nutritionist.html">Nutritionist</a></li>
+                <li class="dropdown-navbar"><a href="nutritionist.html">Nutritionist</a></li>
                 <li class="dropdown-navbar"><a href="coach.html">Gym Instructor</a></li>
                 <li class="dropdown-navbar"><a href="coach.html">Fitness Advisor</a></li>
               </ul>
@@ -71,7 +73,7 @@
             <li class="nav-item dropdown">
               <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Health & Fitness Point<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-navbar"><a href="pricing.html">Nutritionist Center</a></li>
+                <li class="dropdown-navbar"><a href="nutritionist.html">Nutritionist Center</a></li>
                 <li class="dropdown-navbar"><a href="pricing.html">Gym & Fitness Center</a></li>
                 <li class="dropdown-navbar"><a href="pricing.html">Parks & Walking Point</a></li>
                 <li class="dropdown-navbar"><a href="pricing.html">Swimming Pool</a></li>
@@ -80,7 +82,7 @@
             <li class="nav-item dropdown">
               <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Tech. & Gear<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-navbar"><a href="pricing.html">Fitness</a></li>
+                <li class="dropdown-navbar"><a href="fitness_gear.html">Fitness</a></li>
                 <li class="dropdown-navbar"><a href="pricing.html">Sports</a></li>
               </ul>
             </li>
@@ -104,12 +106,59 @@
                 <li class="dropdown-navbar"><a href="success-stories.html">Adventure Club</a></li>
               </ul>
             </li>
-              <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-              <li class="nav-item"><a href="blog.html" class="nav-link"><span class="fa fa-arrow-right">&nbsp;Login<i class="sr-only"></i></span></a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item dropdown">
+				<a class="dropdown-toggle nav-link" style="padding-right:65px;" data-toggle="dropdown" href="#">Sign In<span class="caret"></span></a>
+				<ul class="dropdown-menu" >
+					<li class="dropdown-navbar" data-toggle="modal" data-target="#login"><a href="#">Log In</a></li>
+					<li class="dropdown-navbar"><a href="#">Register Now</a></li>
+					<li class="dropdown-navbar"><a href="#">Personal Health Record</a></li>
+					<li class="dropdown-navbar"><a href="#">Edit Profile</a></li>
+					<li class="dropdown-navbar"><a href="#">Logout</a></li>
+				</ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
+	<div class="modal" id="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" align="center">User Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/action_page.php">
+			  <div class="form-group">
+				<label for="email">Email address:</label>
+				<input type="email" class="form-control" placeholder="Enter email" id="email">
+			  </div>
+			  <div class="form-group">
+				<label for="pwd">Password:</label>
+				<input type="password" class="form-control" placeholder="Enter password" id="pwd">
+			  </div>
+			  <div class="form-group form-check">
+				<label class="form-check-label">
+				  <input class="form-check-input" type="checkbox"> Remember me
+				</label>
+			  </div>
+			  <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+			</form> 
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div> <!--modal-->
 	<!-- END nav -->
 
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/doctor.jpg');" data-stellar-background-ratio="0.5">
