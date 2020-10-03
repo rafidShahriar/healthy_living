@@ -4,3 +4,9 @@
 .service-block{
 	min-height: 150px;
 }
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
